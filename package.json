@@ -1,0 +1,30 @@
+{
+  "name": "local-brand-shop",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecursehunter/local-brand-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/thecursehunter/local-brand-shop/issues"
+  },
+  "homepage": "https://github.com/thecursehunter/local-brand-shop#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10"
+  }
+}
