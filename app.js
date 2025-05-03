@@ -1,51 +1,53 @@
-/** 
+/**
  * @license Apache-2.0
  * @copyright 2025 Pham Quang Minh
-*/
+ */
 
 'use strict';
 
-/**
- * node modules
- */
 
+/**
+ * node modules 
+ */
 const express = require('express');
-const helmet = require('helmet');  
+const helmet = require('helmet');
 require('dotenv').config();
 
-/**
- * custom modules
- */
-const home = require('./src/routes/home.route.js');
 
 /**
- * initial express app
+ * custom module
  */
+const home = require('./src/routes/home.route');
 
+
+/**
+ * Initial express app
+ */
 const app = express();
 
-/**
- * setting ejs as view engine
- */
 
+/**
+ * Setting ejs view engine
+ */
 app.set('view engine', 'ejs');
 
 
 /**
- * setting public folder
+ * Setting public folder
  */
-app.use(express.static('${__dirname}/public'));
+app.use(express.static(`${__dirname}/public`));
+
 
 /**
- * setting helmet for security
+ * Setting HTTP response secure headers
  */
 app.use(helmet());
 
 /**
- * home page
+ * Home page
  */
 app.use('/', home);
 
 app.listen(process.env.PORT, () => {
-    console.log(`app listening on http://localhost:${process.env.PORT}`);
+  console.log(`App listening on port ${process.env.PORT}`);
 });
